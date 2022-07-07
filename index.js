@@ -25,6 +25,10 @@ var createScene = function () {
 	sphere.material = new BABYLON.StandardMaterial("material", scene);
 	sphere.material.diffuseColor = new BABYLON.Color3(0.588, 0.805, 0.896);
 	
+	BABYLON.SceneLoader.Append("./", "TeslaSemiSketchfab.glb", scene, function (scene) {
+    // do something with the scene
+});
+	
 	// Add vr
 	var helper = scene.createDefaultVRExperience({createDeviceOrientationCamera: false})
 	helper.enableInteractions()
